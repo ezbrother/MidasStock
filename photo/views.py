@@ -16,6 +16,9 @@ def post_list(request):
     posts = Photo.objects.all().order_by('published_date')
     return render(request, 'photo/index.html', {'posts' : posts})
 
+def test_page(request):
+    return render(request, 'photo/test.html', )
+
 # def login_user(request):
 #     logout(request)
 #     username = password = ''
