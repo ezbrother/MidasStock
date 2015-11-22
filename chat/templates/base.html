@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>OrenTalk</title>
+		<link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="/static/base.css" rel="stylesheet" media="screen">
+	</head>
+	<body>
+
+		<div class="container">
+			<div class="row">
+				<div class="container col-md-1"></div>
+				<div class="container col-md-10">
+				<nav class="navbar navbar-default">
+					<div class="container">
+						<a class="navbar-brand">OrenTalk</a>
+						<ul class="nav navbar-nav">
+							<li class="active"><a href={% url 'home' %}>Home</a></li>
+						</ul>
+						<p class="navbar-text navbar-right"><span id="page-title">{% block page_title %}{% endblock %}</span> |
+						{% if user.username %}
+						Signed in as {{ user.username }} | <a href="{% url 'logout' %}">Logout</a>
+						{% else %}
+						Signed in as Guest | <a href="{% url 'register' %}">Register</a> | <a href="{% url 'login' %}">Login</a> 
+						{% endif %}
+						</p>
+						
+					</div>
+					
+				</nav>
+				</div>
+				<div class="container col-md-1"></div>
+			</div>
+			<div class="row">
+				<div class="container col-md-1"></div>
+				<div class="container col-md-10">
+
+
+					
+					<div class="jumbotron jumbrotron-color">
+						<div class="row">
+							{% if messages %}
+							<ul class="messages">
+							    {% for message in messages %}
+							    <li{% if message.tags %} class="alert-{{ message.tags }} alert"{% endif %}>{{ message }}</li>
+							    {% endfor %}
+							</ul>
+							{% endif %}
+							{% block content %}{% endblock %}
+						</div>
+					</div>
+				</div>
+
+				<div class="container col-md-1"></div>
+			</div>
+		</div>
+		<script src="http://code.jquery.com/jquery.min.js"></script>
+		<script>
+		$( ".errorlist" ).children().addClass("alert alert-danger");
+		</script>
+		{% block additional_script %}{% endblock %}
+	</body>
+</html>

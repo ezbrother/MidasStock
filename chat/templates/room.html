@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block page_title %} {{ room.title }} by {{ room.owner }} {% endblock %}
+
+
+{% block content %}
+	<table class='table table-fixed'>
+		<tbody>
+		{% for message in room.message_set.all %}
+			<tr>
+				<td><p id="message">{{message.owner.username}} : {{ message.text }}</p></td>
+			</tr>
+		{% endfor %}
+			<tr>
+				
+			</tr>
+		</tbody>
+	</table>
+
+	<form method="POST" action="{% url 'room' room.id %}">
+		{{ form.text }}
+		{% csrf_token %}
+		{% if form.errors %}
+			<div class="form-group has-error">
+				<span class="help-block">{{ form.text.errors }}</span>
+			</div>
+		{% endif %}
+	</form>
+
+{% block additional_script %}
+<script>
+  $('tbody').scrollTop(10000000);
+  $("#id_text").focus();
+</script>
+{% endblock %}
+
+
+	
+{% endblock %}

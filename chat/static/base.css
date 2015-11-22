@@ -1,0 +1,104 @@
+.navbar-default {
+  background-color: #f0ad4e;
+  border-color: #ecba69;
+}
+.navbar-default .navbar-brand {
+  color: #f7ecdd;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #ffffff;
+}
+.navbar-default .navbar-text {
+  color: #f7ecdd;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #f7ecdd;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #ecba69;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #ffffff;
+  background-color: #ecba69;
+}
+.navbar-default .navbar-toggle {
+  border-color: #ecba69;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #ecba69;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #f7ecdd;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #f7ecdd;
+}
+.navbar-default .navbar-link {
+  color: #f7ecdd;
+}
+.navbar-default .navbar-link:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #f7ecdd;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background-color: #ecba69;
+  }
+}
+
+body {
+  background-color: #f7ecdd;
+}
+
+.jumbrotron-color {
+  background: white; 
+}
+
+.colorize {
+  color:#614f35;
+  text-align:center;
+}
+
+#message {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 16px;
+}
+
+.table-fixed thead {
+  width: 97%;
+}
+.table-fixed tbody {
+  height: 350px;
+  overflow-y: auto;
+  width: 100%;
+}
+.table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+  display: block;
+}
+
+
+.table-fixed tbody td, .table-fixed thead > tr> th {
+  border-bottom-width: 0;
+}
+
+.navbar-right {
+  margin-right: 227px
+}
+
+.errorlist, .messages {
+  list-style-type: none;
+  padding-left:0;
+}
