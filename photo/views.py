@@ -19,6 +19,9 @@ def post_list(request):
 def test_page(request):
     return render(request, 'photo/test.html', )
 
+def test_page2(request):
+    return render(request, 'photo/test2.html', )
+
 # def login_user(request):
 #     logout(request)
 #     username = password = ''
